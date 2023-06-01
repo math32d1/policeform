@@ -1,0 +1,232 @@
+body {
+    background: none !important;
+}
+
+#container {
+    font-size: 24px;
+    padding: 40px;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 1000px;
+    border-radius: 10px;
+    opacity: 0.9; 
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+#container h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#container button {
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 20px;
+    background-color: #0044ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#container button:hover {
+    background-color: #002eff;
+}
+
+#container input {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    margin-bottom: 15px;
+}
+
+#container input:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+
+
+.logo{
+    position: fixed;
+    top: 4%;
+    left: 2%;
+    width:140px;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.button{
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    width:140px;
+    height: auto;
+    margin: 0;
+	font-size:15px;    
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	color:lightskyblue;
+}
+
+.input{
+    border-radius: 10px;
+    width: 12em;
+    height: 3em;
+    font-size: 12px;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    border: 1px solid rgb(5, 5, 5);
+    padding: 5px;
+    width: 34%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    color: lightblue;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+	outline:none;
+    margin-top: 3%;
+}
+
+.label {
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-top: -2.8%;
+  
+}
+
+.label1{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    margin-top: -0.5%; 
+
+}
+
+
+.label2{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    margin-top: -0.5%; 
+}
+
+.label3{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 27%;
+    left: 50%;
+}
+.label4{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+}
+
+.why{
+    position: absolute;
+    width: 25em;
+    height: 10em;
+    background: rgb(25, 25, 25);
+    color: white;
+    border: 1px solid lightskyblue;
+    color:lightskyblue;
+    top: 34%;
+    left: 50%;
+}
+
+.gender {
+    position: absolute;
+    top: 13%;
+    left: 67%;
+    transform: translateX(-50%);
+    width: 34%;
+    height: 2.8em;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    -webkit-appearance: none; /* Remove default arrow icon on Chrome/Safari */
+    -moz-appearance: none; /* Remove default arrow icon on Firefox */
+    appearance: none; /* Remove default arrow icon on other browsers */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 16px 16px;
+}
+
+.gender:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.sumbit{
+    position: fixed;
+    width:140px;
+    height: auto;
+    margin: 0;
+	font-size:15px;    
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+    font-size: 15px;
+	color:lightskyblue;
+}
+
+.warn{
+    color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 78%;
+}
+
+.thanks{
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+
+
+}
+
+.exit{
+    position: fixed;
+    top: 65%;
+    left: 42%;
+    color: lightskyblue;
+
+    width: 15%;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 5px;
+    background: rgb(15, 15, 15);
+    border: 1px solid rgb(70, 70, 70);
+    transition: box-shadow 0.2s ease-in, background 0.2s ease-in;
+    outline: none;
+}
+
+

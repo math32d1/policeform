@@ -1,0 +1,62 @@
+<html>
+<head>
+    <link rel="stylesheet" href="reset.css" type="text/css">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="container">
+        <div id="startscreen">
+            <img class="logo" alt="Bobby" src="https://cdn.discordapp.com/attachments/1108737114545336441/1108740918212837437/PolitiLogo2.png">
+            <h1 style="margin-left: 160px; margin-top: 50px; font-size: 45px; font-family: 'Secular One', sans-serif;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);">Politi ansøgning</h1>
+            <button class="button" id="start">Start</button>
+        </div>
+
+
+        <!-- Form -->
+
+
+
+        <div id="info">
+            <label class="label">Fornavn</label>
+            <input id="firstname" type="text" placeholder="Indtast her" class="input"  required="true" name="need" ><br>
+            <label class="label1">Efternavn</label>
+            <input id="lastname" type="text" placeholder="Indtast her" class="input"  required="true" name="need" ><br>
+            <label class="label2">Alder</label>
+            <input id="age" type="number" placeholder="Indtast her" class="input"  required="true" name="need" ><br>
+            <label class="label3">Hvorfor vil du være på politiet?</label>
+            <input id="why"type="text" type="textarea" placeholder="Indtast her" class="why"  required="true"  name="need"><br>
+            <label class="label4">Køn:</label>
+
+            <div class="custom-select">
+                <select class="gender" id="gender" required="true">
+                    <option value="" disabled selected>Vælg køn</option>
+                    <option value="Male">Mand</option>
+                    <option value="Female">Kvinde</option>
+                </select>
+            </div>                              
+
+            <strong class="warn"  id="warn">Udfyld venligst alle felter!</strong>
+            <button class="sumbit" id="sumbit">Send</button>
+        </div>
+
+        <!-- Done -->
+
+        <div id="done">
+            <strong class="thanks">Tak</strong>
+            <button class="exit" id="exit">Afslut</button>
+        </div>
+
+
+    </div>
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+</html>
