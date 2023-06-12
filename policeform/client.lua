@@ -5,7 +5,6 @@ RegisterCommand("nui", function(source, args)
     SetDisplay(not display)
 end)
 
---very important cb 
 RegisterNUICallback("exit", function(data)
 
     SetDisplay(false)
@@ -15,7 +14,6 @@ end)
 RegisterNUICallback("main", function(data)
     SetDisplay(false)
 end)
-
 
 function SetDisplay(bool)
     display = bool
@@ -72,17 +70,48 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
         local pos = GetEntityCoords(GetPlayerPed(-1))
-        if (GetDistanceBetweenCoords(pos, 441.88565063477,-984.13305664063,30.689582824707, true) < 3) then
-            DrawMarker(2, 441.88565063477,-984.13305664063,30.689582824707 , 0.0, 0.0, 0.0, 300.0, 0.0, 0.0, 0.25, 0.25, 0.05, 0, 100, 255, 255, false, true, 2, false, false, false, false)
-            DrawText3D(441.88565063477,-984.13305664063,30.689582824707 + 0.2, "~b~[E]~w~ Åbn en formular")
-            if IsControlJustReleased(1, 38) then        
-                SetDisplay(not display)
+        if Config.oxtarget then
+            return
+        end
+        for i = 1, #Config.OpenPlaces do
+            local place = Config.OpenPlaces[i]
+            if GetDistanceBetweenCoords(pos, place.x, place.y, place.z, true) < 3 then
+                DrawMarker(2, place.x, place.y, place.z, 0.0, 0.0, 0.0, 300.0, 0.0, 0.0, 0.25, 0.25, 0.05, 0, 100, 255, 255, false, true, 2, false, false, false, false)
+                DrawText3D(place.x, place.y, place.z + 0.2, "~b~[E]~w~ Åbn en formular")
+                if IsControlJustReleased(1, 38) then        
+                    TriggerEvent('policefrom:openmenu')
+                end
             end
-		end
-	end
+        end
+    end
+end)
+
+if cfg.oxtarget then
+    if startet then
+        for i = 1, #Config.OpenPlaces do
+            local place = Config.OpenPlaces[i]
+            exports.ox_target:addBoxZone({
+                coords = vec3(place.x, place.y, place.z),
+                size = vec3(2, 2, 2),
+                debug = drawZones,
+                options = {
+                    {
+                        name = 'box',
+                        Event = 'policefrom:openmenu',
+                        icon = 'fa-solid fa-user-police',
+                        label = "Ringer på " .. place.pname .. "!",
+                    }
+                }
+            })
+        end
+    end
+end
+
+RegisterNetEvent('policefrom:openmenu')
+AddEventHandler('policefrom:openmenu', function()
+    SetDisplay(not display)
 end)
 
 RegisterNUICallback('name', function(data, cb)
     TriggerServerEvent("log" , data)
-
 end)

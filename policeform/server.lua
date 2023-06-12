@@ -1,5 +1,3 @@
-local DISCORD_WEBHOOK = "Your Webhook Here"
-
 RegisterServerEvent('log')
 AddEventHandler('log', function(data)
     local connect = {
